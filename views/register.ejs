@@ -1,0 +1,28 @@
+<%- include('header', { title: 'Signup' }); -%>
+
+<div class="container">
+    <button class="close-btn" onclick="goBack()">×</button>
+
+    <h1>Sign Up</h1>
+    <form action="/signup" method="POST">
+        <label for="user_name">Name</label>
+        <input type="text" class="input" name="_name" id="user_name" placeholder="Enter your name" required>
+        
+        <label for="user_phonenumber">Phone Number</label>
+        <input type="text" class="input" name="_phonenumber" id="user_phonenumber" placeholder="Enter your phone number" required>
+        
+        <label for="user_pass">Password</label>
+        <input type="password" class="input" name="_password" id="user_pass" placeholder="Enter your password" required>
+        
+        <% if (typeof msg !== 'undefined' && msg) { %>
+            <div class="success-msg"><%= msg %></div>
+        <% } if (typeof error !== 'undefined' && error) { %>
+            <div class="err-msg"><%= error %></div>
+        <% } %>
+        
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <div class="link"><a href="/login">Login</a></div>
+    </form>
+</div>
+
+<%- include('footer'); -%>

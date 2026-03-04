@@ -1,0 +1,267 @@
+img {
+    max-width: 100%;
+}
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#navigation {
+    box-shadow: -5px 10px 3px #ff71b673;
+    border-radius: 0 0 0 20px;
+    width: 300px;
+    height: 520px;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    background: #fff;
+    z-index: 2;
+    transition: 0.4s ;
+}
+nav ul li {
+    margin: 50px 20px;
+}
+nav ul li a { 
+    font-size: 32px;
+    color: #FF71B5;
+}
+nav ul li a:hover {
+    border-bottom: 5px solid #ABF9AE;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+#menuicon {
+    position: fixed;
+    width: 35px;
+    right: 60px;
+    top: 20px;
+    z-index: 2;
+    cursor: pointer;
+}
+#closeicon {
+    position: fixed;
+    width: 35px;
+    right: 60px;
+    top: 20px;
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lemon", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #504141;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 10px 20px;
+}
+
+#back-button {
+    font-size: 1em;
+    background-color: #FF71B5;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #e05f9e;
+}
+
+.logo {
+    height: 50px;
+    align-items: center;
+}
+
+.profile-container {
+    width: 90%;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;  
+    overflow-y: auto;
+    
+}
+
+.profile-header .avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ff71b6;
+}
+.profile-header .avatar img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+.profile-header .user-name {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.profile-header .user-email {
+    font-size: 1rem;
+    color: #666;
+}
+
+.profile-content {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 20px; 
+    width: 100%; 
+}
+.profile-section {
+    width: 90%; 
+    max-width: 600px; 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    text-align: left;
+}
+
+.profile-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.favorites-list li {
+    margin: 5px 0;
+}
+
+.order-history {
+    width: 100%;
+    max-width: 600px;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+
+.order-history th, .order-history td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.btn, .btn-back {
+    background-color: #ff71b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover, .btn-back:hover {
+    background-color: #ff589e;
+}
+.btn:focus, .btn-back:focus {
+    outline: 2px solid #ff71b6;
+    outline-offset: 2px;
+}
+
+
+.logout-link {
+    color: #ff71b6;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #ff71b6;
+    margin-bottom: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ff71b6;
+    padding-bottom: 5px;
+}
+
+.info-details p {
+    font-size: 1rem;
+    color: #504141;
+    margin: 8px 0;
+}
+
+.info-highlight {
+    font-weight: bold;
+    color: #ff589e;
+}
+
+.discount-banner {
+    margin-top: 10px;
+    background: #ffebf7;
+    padding: 10px;
+    border: 1px solid #ff71b6;
+    border-radius: 10px;
+    text-align: left;
+}
+.highlight-text {
+    font-size: 1rem;
+    color: #ff589e;
+    font-weight: bold;
+}
+
+.discount-code {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+    display: block;
+}
+#show-more-orders {
+    display: none; 
+    margin-top: 10px;
+    background-color: #ff71b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+#show-more-orders:hover {
+    background-color: #ff589e;
+}

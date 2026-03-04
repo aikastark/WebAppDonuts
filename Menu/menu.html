@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="shortcut icon" href="Images1/icon donuts.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lemon&family=Lemonada:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <nav id="navigation">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="/#location">Location</a></li>
+            <li><a href="/cart" id="cart-link-nav">Cart</a></li>
+            <li id="profile-link" style="display: none;"><a href="/profile">Profile</a></li>
+        </ul>
+    </nav>
+    <img src="Images1/menuicon.png" onclick="openFunction()" id="menuicon">
+    <img src="Images1/closeicon.png" onclick="closeFunction()" id="closeicon">
+    
+    <header class="logo">
+        <a href="/">
+            <img src="Images2/logo_donut.png" alt="" class="logo">
+        </a>
+    </header>
+    <header class="image-container">
+        <a href="/cart" id="cart-link-header">
+            <img src="Images2/cart-logo2.png" alt="cart-img">
+        </a>
+    </header>
+    
+
+    
+    <section class="menu-section">
+        
+
+        <h1 class="title-h1 main__title">Donut Flavors</h1>
+        <p class="text main__title2">Winter novelties!</p>
+     
+        <div class="menu-item">
+            <img src="Images2/snowy-sparkle.png" alt="" class="menu-image">
+            <div class="menu-description">
+                <h2>Snowy Sparkle</h2>
+                <p>White icings and sprinkles in New Year's colors.</p>
+                <div class="menu-footer">
+                    <span class="price">1490KZT</span>
+                    <button class="add-to-cart" onclick="addToCartAnimation(event)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item1">
+            <div class="child1">
+                <h2>Frosty Sprinkle</h2>
+                <p>Vanilla glazed donut with colorful sprinkles.</p>
+                <div class="menu-footer">
+                    <span class="price1">1290KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+            <img src="Images2/frosty-sprinkle.png" alt="" class="menu-image1">
+        </div>
+
+        <div class="menu-item2">
+            <img src="Images2/winter-love.png" alt="" class="menu-image2">
+            <div class="child2">
+                <h2>Winter love</h2>
+                <p>Red icing and heart sprinkles.</p>
+                <div class="menu-footer2">
+                    <span class="price2">1390KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item3">
+            <div class="child3">
+                <h2>Snow Surprise</h2>
+                <p>With snow-white icing and New Year's sprinkles.</p>
+                <div class="menu-footer">
+                    <span class="price3">1190KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+            <img src="Images2/snow-surprise.png" alt="" class="menu-image3">
+        </div>
+
+        <p class="text_title2">Constant assortment</p>
+        <div class="menu-item4">
+            <img src="Images2/chco_boom.png" alt="" class="menu-image4">
+            <div class="child4">
+                <h2>Chocolate BOOM</h2>
+                <p>Chocolate icing filled with milk chocolate.</p>
+                <div class="menu-footer4">
+                    <span class="price4" >1190KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item5">
+            <div class="child5">
+                <h2>Sugar Crush</h2>
+                <p>Sugar powder filled with caramel.</p>
+                <div class="menu-footer">
+                    <span class="price5" >990KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+            <img src="Images2/sugar-crash.png" alt="" class="menu-image5">
+        </div>
+
+        <div class="menu-item6">
+            <img src="Images2/pinky.png" alt="" class="menu-image6">
+            <div class="child6">
+                <h2>Pinky</h2>
+                <p>A classic pink glazed donut filled with white chocolate.</p>
+                <div class="menu-footer6">
+                    <span class="price6">1290KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item7">
+            <div class="child7">
+                <h2>Birthday Cake</h2>
+                <p>A chocolate-glazed donut topped with crunchy whole and sliced almonds.</p>
+                <div class="menu-footer">
+                    <span class="price7">1390KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+            <img src="Images2/bthday-cake.png" alt="" class="menu-image7">
+        </div>
+
+        <div class="menu-item8">
+            <img src="Images2/choco-nut.png" alt="" class="menu-image8">
+            <div class="child8">
+                <h2>Choco Nut Delight</h2>
+                <p>A chocolate-glazed donut topped with crunchy whole and sliced almonds.</p>
+                <div class="menu-footer8">
+                    <span class="price8">1490KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item9">
+            <div class="child9">
+                <h2>Almond Heaven</h2>
+                <p>Covered with glaze and decorated with almonds.</p>
+                <div class="menu-footer">
+                    <span class="price9">1590KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+            <img src="Images2/almond.png" alt="" class="menu-image9">
+        </div>
+
+        <div class="menu-item10">
+            <img src="Images2/banana.png" alt="" class="menu-image10">
+            <div class="child10">
+                <h2>Nutty Banana Bliss</h2>
+                <p>This donut is topped with a thick layer of chocolate glaze and chopped peanuts.</p>
+                <div class="menu-footer10">
+                    <span class="price10">1490KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item11">
+            <div class="child11">
+                <h2>Pistachio Dream</h2>
+                <p>A soft donut with a vibrant pistachio glaze, sprinkled with crushed pistachios.</p>
+                <div class="menu-footer11">
+                    <span class="price11">1290KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+            <img src="Images2/pistachio.png" alt="" class="menu-image11">
+        </div>
+
+        <div class="menu-item12">
+            <img src="Images2/oreo.png" alt="" class="menu-image12">
+            <div class="child12">
+                <h2>Oreo Choco Crunch</h2>
+                <p>Chocolate donut topped with Oreo crumbs, creamy frosting, and a drizzle of chocolate, finished with a mini Oreo cookie.</p>
+                <div class="menu-footer12">
+                    <span class="price12" >1490KZT</span>
+                    <button class="add-to-cart">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../menu.js"></script>
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const response = await fetch('/auth-status');
+        const data = await response.json();
+
+        const cartNavLink = document.getElementById('cart-link-nav'); 
+        const cartHeaderLink = document.getElementById('cart-link-header'); 
+
+        const newHref = data.isLoggedIn ? '/cart' : '/login';
+
+        if (cartNavLink) cartNavLink.href = newHref;
+        if (cartHeaderLink) cartHeaderLink.href = newHref;
+    } catch (error) {
+        console.error("Error fetching auth status:", error);
+    }
+});
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const response = await fetch('/auth-status');
+            const data = await response.json();
+    
+            const profileLink = document.getElementById('profile-link');
+            const navigation = document.getElementById('navigation');
+    
+            if (data.isLoggedIn) {
+                profileLink.style.display = 'inline'; 
+                navigation.style.height = '500px'; 
+            } else {
+                profileLink.style.display = 'none'; 
+                navigation.style.height = '430px'; 
+            }
+        } catch (error) {
+            console.error('Error fetching auth status:', error);
+        }
+    });
+     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</html>

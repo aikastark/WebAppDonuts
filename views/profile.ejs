@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+         <!-- connect with icon library -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+         <!-- Bootstrap extension -->
+         <link rel="stylesheet" href="../css/bootstrap.min.css">
+     
+         <!-- path for the css code -->
+         <link rel="stylesheet" href="/profile.css">
+     
+         <!-- connect with google fonts -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lemon&family=Lemonada:wght@300..700&display=swap"
+             rel="stylesheet">
+</head>
+<body>
+ <!-- side-bar with links to the other pages -->
+ <nav id="navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/#location">Location</a></li>
+        <li><a href="/cart" id="cart-link">Cart</a></li>
+        <li><a href="/profile" id="cart-link">Profile</a></li>
+    </ul>
+</nav>
+<img src="Images1\menuicon.png" onclick="openFunction()" id="menuicon">
+<img src="Images1\closeicon.png" onclick="closeFunction()" id="closeicon">
+
+<div class="header">
+    <button onclick="goBack()" id="back-button">← Back</button>
+    <a href="http://localhost:3000">
+        <img src="/Images1/Logo.jpg" alt="Logo" class="logo">
+    </a>
+</div>
+<div class="profile-container">
+    <header class="profile-header">
+        <div class="avatar">
+            <img src="/Images1/user.png" alt="User Avatar">
+        </div>
+    <!-- Display the user's name and phone number -->
+    <h1 class="user-name"><%= user.name %></h1>
+    <p class="user-email"><%= user.phonenumber %></p>
+    </header>
+</div>
+
+
+        <main class="profile-content">
+            <!-- User Info -->
+            <section class="profile-section">
+                <h2>Your Info</h2>
+                <p><strong>Total Orders:</strong> <span id="total-orders"><%= totalOrders %></span></p>
+                <p><strong>Exclusive Discount:</strong></p>
+                <div class="discount-banner">
+                    <span class="highlight-text">Enjoy 10% OFF on your next order!</span>
+                    <span class="discount-code">Use code: DONUT10</span>
+                </div>
+            </section>
+        
+
+<!-- Order History -->
+<section class="profile-section">
+    <h2>Order History</h2>
+    <table class="order-history">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Items</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="order-history-body">
+            <!-- Orders will be loaded dynamically -->
+        </tbody>
+    </table>
+    <button id="show-more-orders" class="btn">Show More</button>
+</section>
+
+
+<section class="profile-section">
+    <h2>Leave a Review</h2>
+    <form id="review-form">
+        <textarea name="reviewText" placeholder="Write your review here..." required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+        </main>
+
+
+    </section>
+
+    </div>
+
+    <a href="/logout" class="logout-link">Logout</a>
+    <script src="../profile.js"></script>
+    
+</body>
+</html>

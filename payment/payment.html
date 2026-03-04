@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="/payment.css"> 
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Choose Payment Method</h1>
+        <div class="delivery-pickup-selection">
+            <button id="deliveryBtn" onclick="selectDelivery()">Delivery</button>
+            <button id="pickupBtn" onclick="selectPickup()">Pickup</button>
+        </div>
+        
+        <div id="deliveryFields" class="input-group" style="display: none;">
+            <label for="address">Delivery Address</label>
+            <input type="text" id="address" placeholder="Enter address">
+            <label for="deliveryTime">Delivery Time</label>
+            <input type="time" id="deliveryTime">
+        </div>
+        
+        <div id="pickupFields" class="input-group" style="display: none;">
+            <label for="store">Choose Store</label>
+            <select id="store" name="store">
+                <option value="">Select store</option>
+                <option value="Aktobe - Abulkhair Khan Avenue, 25">Aktobe - Aliya Moldagulova, 30A</option>
+                <option value="Astana - Baitursynov Street, 10">Astana - Baitursynov Street, 10</option>
+                <option value="Atyrau - Satpayev Street, 42">Atyrau - Satpayev Street, 42</option>
+                <option value="Khromtau - Taimanov Street, 17">Khromtau - Taimanov Street, 17</option>
+                <option value="Kulsary - Altynsarin Street, 5">Kulsary - Altynsarin Street, 5</option>
+                <option value="Aktau - Mangilik Yel Avenue, 8">Aktau - Mangilik Yel Avenue, 8</option>
+            </select>
+            
+            <label for="pickupTime">Pickup Time</label>
+            <input type="time" id="pickupTime">
+        </div>
+
+        <p class="total-amount">For Payment: <span id="total-payment">0.00KZT</span></p>
+        
+        <button class="payment-option" onclick="payOnReceipt()">Pay Upon Receipt</button>
+        <button class="payment-option kaspi-button" onclick="payWithKaspi()">
+            Pay with Kaspi.kz
+        </button>      
+        <button class="cancel-button" id="cancel-payment" onclick="cancelPayment()">Cancel Payment</button>
+
+        <div id="kaspiModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h2>KaspiQR</h2>
+                <img src="Images2/kaspiqr.jpg" alt="QR Code" class="qr-code">
+                <button id="closeModalButton" class="close-button">Close</button>
+            </div>
+        </div>
+        
+         <!-- Success message modal -->
+         <div id="successMessage" class="modal" style="display:none;">
+            <p id="orderMessage"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="../payment.js"></script>
+
+
+</body>
+</html>

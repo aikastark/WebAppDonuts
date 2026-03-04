@@ -1,0 +1,23 @@
+<%- include('header', { title: 'Login' }); -%>
+
+<div class="container">
+    <button class="close-btn" onclick="goBack()">×</button>
+
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <label for="user_phonenumber">Phone Number</label>
+        <input type="text" class="input" name="_phonenumber" id="user_phonenumber" placeholder="Enter your phone number" required>
+        
+        <label for="user_pass">Password</label>
+        <input type="password" class="input" name="_password" id="user_pass" placeholder="Enter your password" required>
+        
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="err-msg"><%= error %></div>
+        <% } %>
+        
+        <button type="submit" class="btn btn-primary">Login</button>
+        <div class="link"><a href="/signup">Sign Up</a></div>
+    </form>
+</div>
+
+<%- include('footer'); -%>

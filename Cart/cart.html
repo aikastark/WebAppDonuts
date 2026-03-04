@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoNut - enjoy with donuts🎀</title>
+    <link rel="shortcut icon" href="../Main/Images1/icon donuts.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lemon&family=Lemonada:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navigation">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/#location">Location</a></li>
+            <li><a href="#">Cart</a></li>
+            <li id="profile-link" style="display: none;"><a href="/profile">Profile</a></li>
+        </ul>
+    </nav>
+    <img src="/Images1/menuicon.png" onclick="openFunction()" id="menuicon">
+    <img src="/Images1/closeicon.png" onclick="closeFunction()" id="closeicon">
+
+    <div class="header">
+        <button onclick="goBack()" id="back-button">← Back</button>
+        <a href="http://localhost:3000">
+            <img src="/Images1/Logo.jpg" alt="Logo" class="logo">
+        </a>
+    </div>
+
+    <h1>Shopping Cart</h1>
+    <div id="cart-container">
+        <div id="cart-items"></div>
+        <div id="total-price">Total: 0.00KZT</div>
+        <div id="promo-code-container">
+            <label for="promo-code">Promo Code:</label>
+            <input type="text" id="promo-code" placeholder="Enter promo code">
+            <button id="apply-promo-code" onclick="applyPromoCode()">Apply</button>
+        </div>
+        <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <a href="/payment">
+    <button id="proceed-to-payment" onclick="goToPayment()">Proceed to Payment</button>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('/auth-status');
+                const data = await response.json();
+        
+                const profileLink = document.getElementById('profile-link');
+                const navigation = document.getElementById('navigation');
+        
+                if (data.isLoggedIn) {
+                    profileLink.style.display = 'inline'; 
+                    navigation.style.height = '530px'; 
+                } else {
+                    profileLink.style.display = 'none'; 
+                    navigation.style.height = '430px'; 
+                }
+            } catch (error) {
+                console.error('Error fetching auth status:', error);
+            }
+        });
+        
+                </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const response = await fetch('/auth-status');
+            const data = await response.json();
+    
+            const profileLink = document.getElementById('profile-link');
+            const navigation = document.getElementById('navigation');
+    
+            if (data.isLoggedIn) {
+                profileLink.style.display = 'inline'; 
+                navigation.style.height = '530px'; 
+            } else {
+                profileLink.style.display = 'none'; 
+                navigation.style.height = '430px'; 
+            }
+        } catch (error) {
+            console.error('Error fetching auth status:', error);
+        }
+    });
+    
+    function applyPromoCode() {
+    const promoCodeInput = document.getElementById('promo-code').value.trim();
+    const totalPriceElement = document.getElementById('total-price');
+    let totalPrice = parseFloat(totalPriceElement.textContent.replace('Total: ₸', ''));
+
+    if (promoCodeInput === 'DONUT10') {
+        const discount = totalPrice * 0.1; 
+        const discountedTotal = (totalPrice - discount).toFixed(2); 
+        totalPriceElement.textContent = `Total: ₸${discountedTotal}`; 
+        localStorage.setItem("totalPayment", discountedTotal); 
+        alert(`Promo code applied! You saved ₸${discount.toFixed(2)}.`);
+    } else {
+        alert('Invalid promo code'); 
+    }
+}
+
+</script>
+</body>
+<script src="../cart.js"></script>
+
+</html>
