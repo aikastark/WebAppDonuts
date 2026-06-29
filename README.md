@@ -1,6 +1,6 @@
 # Food Ordering Web Application
 
-This is a web application built using Node.js and Express that allows users to browse a menu and manage orders.
+Our web application was created as part of a project at Heriot-Watt University. It was developed by a team of four. The web application is a website for donut orders. Everything was done to the highest quality, including all pages: the main page, which welcomes you with a video upon entry, and a small menu tab at the bottom, along with a location map and who recommends us. The menu animates when adding to cart and even changes color when hovered over. The purchase process also works, and everything is saved in the database and in the file.
 
 <img width="827" height="462" alt="image" src="https://github.com/user-attachments/assets/6b04ba34-7d11-44ff-9efd-90912bfa15fe" />
 
